@@ -190,6 +190,7 @@ GEM
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
+    rspec-kickstarter (1.0.2)
     rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
@@ -279,6 +280,7 @@ DEPENDENCIES
   rails-erd
   rails_admin
   redis (~> 3.0)
+  rspec-kickstarter
   rspec-rails
   sass-rails (~> 5.0)
   shoulda

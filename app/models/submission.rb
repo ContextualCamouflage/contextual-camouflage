@@ -2,8 +2,8 @@ class Submission < ApplicationRecord
   belongs_to :installation, :primary_key => :locality, :foreign_key => :locality
   has_many :anecdotes
   has_many :researches
-  before_save :geocode_location
-  validate :double_submit_same_illness
+  # before_save :geocode_location
+  # validate :double_submit_same_illness
 
 private
 
@@ -14,7 +14,7 @@ private
   end
 
   def double_submit_same_illness
-    if Submission.exists?(cookie: self.cookie, illness: self.illness)
+    if Submission.exists?(cookie: self.cookie, illness_id: self.illness_id)
       errors.add(:cookie, "User already submitted this illness.")
     end
   end
