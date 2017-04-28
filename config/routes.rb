@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/anecdotes/random', to: 'anecdotes#random'
   resources :illnesses, only: [:index, :show]
   resources :researches, only: [:create]
+  root 'installations#index'
 
 end
