@@ -6,3 +6,8 @@
 %p
   Activated On:
   = @installation.active_at
+
+- @submissions.each do |submission|
+  = Illness.find_by_id(submission.illness_id).name
+
+= render :partial => "submissions/form", :locals => { :submission => Submission.new, :installation => @installation }

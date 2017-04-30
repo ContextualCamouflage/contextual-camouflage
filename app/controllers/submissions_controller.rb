@@ -6,11 +6,19 @@ class SubmissionsController < ApplicationController
 
   def create
     @submission = Submission.create(submission_params)
+    @submission.ip_address = request.remote_ip
+    @submission.geocode_location
+    @submission.cookie = session['session_id']
+    if @submission.save
+      redirect_to @submission.installation
+    else
+      redirect_to @submission.installation
+    end
   end
 
   private
   def submission_params
-    params.require(:submission).permit(:cookie, :illness, :relationship, :ip_address, :city)
+    params.require(:submission).permit(:relationship, :ip_address, :illness_id, :locality)
   end
 
   def count_by_illness(city)

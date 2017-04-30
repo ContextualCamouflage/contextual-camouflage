@@ -49,9 +49,10 @@ ActiveRecord::Schema.define(version: 20170416155104) do
     t.string "cookie"
     t.string "relationship"
     t.string "zip_code"
-    t.string "city"
     t.string "ip_address"
     t.string "locality"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.integer "illness_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

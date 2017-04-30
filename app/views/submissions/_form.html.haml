@@ -1,0 +1,5 @@
+= form_for submission do |f|
+  .form-group
+    = f.select(:illness_id, Illness.all.collect {|w| [w.name, w.id]})
+    = f.select(:relationship, ['self', 'relation'])
+  = f.submit "Submit"

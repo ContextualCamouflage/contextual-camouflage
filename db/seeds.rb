@@ -12,6 +12,12 @@ Installation.create!(
   active_at: '2017-01-01'
 )
 
+Installation.create!(
+  locality: 'Sewickley',
+  active: true,
+  active_at: '2017-01-01'
+)
+
 # Parsing illnesses csv to seed db
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'illnesses.csv'))
 csv = CSV.parse(csv_text, :headers => true)
@@ -33,7 +39,8 @@ illnesses = Illness.all
     relationship: RELATIONSHIPS.sample,
     ip_address: ip,
     locality: "Oakland",
-    city: "Oakland",
+    latitude: 37.8044,
+    longitude: 122.2711,
     zip_code: "15222"
   )
 end
