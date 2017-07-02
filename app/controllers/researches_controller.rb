@@ -5,7 +5,8 @@ class ResearchesController < ApplicationController
   end
 
   private
+
   def research_params
-    params.require(:research).permit(:age, :gender, :occupation, :race, :cookie)
+    params.require(:research).permit(:age, :gender, :occupation, :race, :submission_id)
   end
 end

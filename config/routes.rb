@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   resources :submissions, only: [:create, :index]
   resources :anecdotes, only: [:create]
   get '/anecdotes/random', to: 'anecdotes#random'
+  
   resources :illnesses, only: [:index, :show]
+  
   resources :researches, only: [:create]
+  
   root 'installations#index'
 
 end

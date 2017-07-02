@@ -2,30 +2,23 @@ require 'rails_helper'
 
 RSpec.describe AnecdotesController, type: :controller do
 
-  describe '#index' do
-    it 'works' do
-      anecdotes_controller = AnecdotesController.new
-      result = anecdotes_controller.index
-      expect(result).not_to be_nil
-    end
+  before do
+    FactoryGirl.create(:installation)
+    illness = FactoryGirl.create(:illness)
+    @submission = FactoryGirl.create(:submission, illness_id: illness.id)
+    @anecdote = FactoryGirl.create(:anecdote, submission_id: @submission.id)
   end
-
 
   describe '#create' do
     it 'works' do
-      anecdotes_controller = AnecdotesController.new
-      result = anecdotes_controller.create
-      expect(result).not_to be_nil
+      post :create, params: {anecdote: {body: "Here is a body!", submission_id: @submission.id}}
+      expect(assigns(:anecdote)).to eq Anecdote.last
     end
   end
 
-
-  describe '#random' do
-    it 'works' do
-      anecdotes_controller = AnecdotesController.new
-      result = anecdotes_controller.random
-      expect(result).not_to be_nil
-    end
-  end
+  # describe '#random' do
+  #   it 'works' do
+  #   end
+  # end
 
 end

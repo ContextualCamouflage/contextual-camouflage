@@ -2,20 +2,36 @@ require 'rails_helper'
 
 RSpec.describe IllnessesController, type: :controller do
 
+  before do
+    @illness = FactoryGirl.create(:illness)
+  end
+
   describe '#index' do
-    it 'works' do
-      illnesses_controller = IllnessesController.new
-      result = illnesses_controller.index
-      expect(result).not_to be_nil
+    it "returns http success" do
+      get :index
+      expect(response).to have_http_status(:success)
     end
   end
 
-
   describe '#show' do
-    it 'works' do
-      illnesses_controller = IllnessesController.new
-      result = illnesses_controller.show
-      expect(result).not_to be_nil
+    it "returns http success" do
+      get :show, params: { id: @illness.id }
+      expect(response).to have_http_status(:success)
+    end
+
+    it "renders the #show view" do
+      get :show, params: { id: @illness.id }
+      expect(response).to have_http_status(:success)
+    end
+
+    it "renders the #show view" do
+      get :show, params: { id: @illness.id }
+      expect(response).to render_template :show
+    end
+
+    it "assigns illness to @illness" do
+      get :show, params: { id: @illness.id }
+      expect(assigns(:illness)).to eq(@illness)
     end
   end
 

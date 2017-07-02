@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20170416155104) do
 
   create_table "anecdotes", id: :serial, force: :cascade do |t|
     t.text "body"
-    t.integer "submissions_id"
+    t.integer "submission_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["submissions_id"], name: "index_anecdotes_on_submissions_id"
+    t.index ["submission_id"], name: "index_anecdotes_on_submission_id"
   end
 
   create_table "illnesses", id: :serial, force: :cascade do |t|
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20170416155104) do
   create_table "installations", id: :serial, force: :cascade do |t|
     t.string "locality"
     t.boolean "active"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.datetime "active_at"
   end
 
@@ -39,10 +41,10 @@ ActiveRecord::Schema.define(version: 20170416155104) do
     t.string "age"
     t.string "race"
     t.string "occupation"
-    t.integer "submissions_id"
+    t.integer "submission_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["submissions_id"], name: "index_researches_on_submissions_id"
+    t.index ["submission_id"], name: "index_researches_on_submission_id"
   end
 
   create_table "submissions", id: :serial, force: :cascade do |t|
@@ -76,7 +78,7 @@ ActiveRecord::Schema.define(version: 20170416155104) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "anecdotes", "submissions", column: "submissions_id"
-  add_foreign_key "researches", "submissions", column: "submissions_id"
+  add_foreign_key "anecdotes", "submissions"
+  add_foreign_key "researches", "submissions"
   add_foreign_key "submissions", "illnesses"
 end

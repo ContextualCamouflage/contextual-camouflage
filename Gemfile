@@ -21,18 +21,20 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
 
-gem 'geocoder'
 gem 'time_for_a_boolean'
 gem 'devise'
 gem 'pundit'
+
 gem 'rails_admin'
+
+gem 'geocoder'
 gem 'haml-rails'
+gem 'leaflet-rails'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
   gem 'faker'
-  gem 'rspec-kickstarter'
+  gem 'to_factory'
 end
 
 group :development do
@@ -50,7 +52,5 @@ group :test do
   gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'simplecov'
+  gem 'rails-controller-testing'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

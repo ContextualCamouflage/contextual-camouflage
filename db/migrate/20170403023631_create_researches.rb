@@ -5,7 +5,7 @@ class CreateResearches < ActiveRecord::Migration[5.0]
       t.string :age
       t.string :race
       t.string :occupation
-      t.references :submissions, index: true, foreign_key: true
+      t.references :submission, index: true, foreign_key: true
       t.timestamps
     end
   end

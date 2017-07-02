@@ -9,4 +9,10 @@ class IllnessesController < ApplicationController
     @illness = Illness.find_by_id(params[:id])
   end
 
+  protected
+
+  def illness_params
+    params.require(:illness).permit(:name, :body)
+  end
+
 end

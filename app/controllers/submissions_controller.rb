@@ -17,6 +17,7 @@ class SubmissionsController < ApplicationController
   end
 
   private
+  
   def submission_params
     params.require(:submission).permit(:relationship, :ip_address, :illness_id, :locality)
   end

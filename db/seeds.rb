@@ -9,13 +9,17 @@ User.create!(
 Installation.create!(
   locality: 'Oakland',
   active: true,
-  active_at: '2017-01-01'
+  active_at: '2017-01-01',
+  latitude: 37.8044,
+  longitude: 122.2711,
 )
 
 Installation.create!(
   locality: 'Sewickley',
   active: true,
-  active_at: '2017-01-01'
+  active_at: '2017-01-01',
+  latitude: 40.5365,
+  longitude: 80.1844,
 )
 
 # Parsing illnesses csv to seed db
@@ -32,15 +36,13 @@ illnesses = Illness.all
 
 # Creating random submissions/anecdotes/researches
 20.times do |n|
-  ip = Faker::Internet.public_ip_v4_address
+  ip = "96.236.157.31"
   Submission.create!(
     illness_id: illnesses.sample.id,
     cookie: "thisismycookie#{rand(10...1000000)}",
     relationship: RELATIONSHIPS.sample,
     ip_address: ip,
-    locality: "Oakland",
-    latitude: 37.8044,
-    longitude: 122.2711,
+    locality: "Sewickley",
     zip_code: "15222"
   )
 end
@@ -50,7 +52,7 @@ submissions = Submission.all
 20.times do |n|
   Anecdote.create!(
     body: Faker::Hipster.sentence,
-    submissions_id: submissions.sample.id
+    submission_id: submissions.sample.id
   )
 end
 
@@ -60,7 +62,7 @@ end
     age: Faker::Number.between(18, 90),
     race: Faker::Demographic.race,
     occupation: Faker::Job.title,
-    submissions_id: submissions.sample.id
+    submission_id: submissions.sample.id
   )
 end
 
