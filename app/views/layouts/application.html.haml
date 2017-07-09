@@ -7,4 +7,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %nav#nav-menu.burgermenu-left
+      %ul
+        %li
+          =link_to "Home", "#"
+    .page-wrapper
+      = link_to "Toggle Menu", "#nav-menu", id: "menu-toggle"
+      = yield

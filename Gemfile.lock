@@ -48,6 +48,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
+    burgermenu-rails (0.1.0)
     byebug (9.0.6)
     choice (0.2.0)
     coderay (1.1.1)
@@ -303,6 +304,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  burgermenu-rails
   devise
   factory_girl_rails
   faker
@@ -334,4 +336,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.6
+   1.15.1
