@@ -7,10 +7,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %nav#nav-menu.burgermenu-left
-      %ul
-        %li
-          =link_to "Home", "#"
-    .page-wrapper
-      = link_to "Toggle Menu", "#nav-menu", id: "menu-toggle"
+    %header.row
+      .nav.col.s12.m4.l2
+      .col.s12.m4.l8
+      .site-name-container.col.s12.m4.l2
+        .site-name Contextual Camouflage Click to go Home
+        = link_to '', root_url, class: 'logo'
+    .container
       = yield
