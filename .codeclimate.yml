@@ -1,0 +1,29 @@
+engines:
+  rubocop:
+    enabled: true
+  golint:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  reek:
+    enabled: true
+    checks:
+      IrresponsibleModule:
+        enabled: false
+      UncommunicativeName:
+        enabled: false
+      UncommunicativeVariableName:
+        enabled: false
+  brakeman:
+    enabled: true
+ratings:
+  paths:
+  - app/**
+  - lib/**
+  - "**.rb"
+  - "**.go"
+
+exclude_paths:
+- app/assets/javascripts/materializejs/

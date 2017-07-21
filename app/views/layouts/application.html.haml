@@ -2,9 +2,17 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:name => "viewport", content: "width=device-width, initial-scale=1"}
     %title ContextualCamoflage
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %header.row
+      .nav.col.s12.m4.l2
+      .col.s12.m4.l8
+      .site-name-container.col.s12.m4.l2
+        .site-name Contextual Camouflage Click to go Home
+        = link_to '', root_url, class: 'logo'
+    .container
+      = yield

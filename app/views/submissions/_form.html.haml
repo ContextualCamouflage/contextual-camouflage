@@ -2,4 +2,4 @@
   .form-group
     = f.select(:illness_id, Illness.all.collect {|w| [w.name, w.id]})
     = f.select(:relationship, ['self', 'relation'])
-  = f.submit "Submit"
+  = f.button "Submit", class: 'btn waves-effect waves-light'

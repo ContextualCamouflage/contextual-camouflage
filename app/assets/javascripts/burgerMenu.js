@@ -1,0 +1,3 @@
+$(function() {
+  $('#nav-menu').burgermenu();
+});

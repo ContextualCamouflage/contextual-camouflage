@@ -1,13 +1,30 @@
-%h1
-  = @installation.locality
-%p
-  Active:
-  = @installation.active
-%p
-  Activated On:
-  = @installation.active_at
+.installations
+  .row
+    .s12.m4.l8
+      %h1.header
+        = @installation.locality
+  .row.active
+    .s12.m4.l8
+      Active:
+      = @installation.active
+  .row.activated
+    .s12.m4.l8
+      Activated On:
+      = @installation.active_at
+  .row.submissions
+    .s12.m6
+      .h4 COMMON MENTAL DISORDERS
+      .row.disorder-key
+        .col.s4.m3.disorder-icon.depression depression
+        .col.s4.m3.disorder-icon.anxiety anxiety
+        .col.s4.m3.disorder-icon.bipolar bipolar
+        .col.s4.m3.disorder-icon.adhd adhd
+        .col.s4.m3.disorder-icon.dementia dementia
+        .col.s4.m3.disorder-icon.ocd ocd
+        .col.s4.m3.disorder-icon.schizophrenia schizophrenia
+        .col.s4.m3.disorder-icon.autism autism
+        .col.s4.m3.disorder-icon.ptsd ptsd
+    .s12.m6
+      .map
 
-- @submissions.each do |submission|
-  = Illness.find_by_id(submission.illness_id).name
-
-= render :partial => "submissions/form", :locals => { :submission => Submission.new, :installation => @installation }
+  = render :partial => "submissions/form", :locals => { :submission => Submission.new, :installation => @installation }
