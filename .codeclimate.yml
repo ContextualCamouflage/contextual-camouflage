@@ -26,4 +26,4 @@ ratings:
   - "**.go"
 
 exclude_paths:
-- app/assets/javascripts/materialjs/
+- app/assets/javascripts/materializejs/
