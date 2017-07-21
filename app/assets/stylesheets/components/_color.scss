@@ -106,7 +106,7 @@ $indigo: (
 );
 
 $blue: (
-  "base":       #2196F3,
+  "base":       #286fb8,
   "lighten-5":  #E3F2FD,
   "lighten-4":  #BBDEFB,
   "lighten-3":  #90CAF9,
@@ -123,7 +123,7 @@ $blue: (
 );
 
 $light-blue: (
-  "base":       #03a9f4,
+  "base":       #0da9e0,
   "lighten-5":  #e1f5fe,
   "lighten-4":  #b3e5fc,
   "lighten-3":  #81d4fa,
@@ -409,4 +409,3 @@ $colors: (
   @warn "Unknown `#{name}` in $colors.";
   @return null;
 }
-
