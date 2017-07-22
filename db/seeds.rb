@@ -43,7 +43,23 @@ illnesses = Illness.all
     relationship: RELATIONSHIPS.sample,
     ip_address: ip,
     locality: "Sewickley",
-    zip_code: "15222"
+    zip_code: "15222",
+    latitude: (40.5365 - Random.new.rand(0.0001...0.0003)),
+    longitude: (-80.1844 + Random.new.rand(0.0001...0.0003))
+  )
+end
+
+20.times do |n|
+  ip = "96.236.157.31"
+  Submission.create!(
+    illness_id: illnesses.sample.id,
+    cookie: "thisismycookie#{rand(10...1000000)}",
+    relationship: RELATIONSHIPS.sample,
+    ip_address: ip,
+    locality: "Sewickley",
+    zip_code: "15222",
+    latitude: (40.5365 + Random.new.rand(0.0001...0.0003)),
+    longitude: (-80.1844 - Random.new.rand(0.0001...0.0003))
   )
 end
 
