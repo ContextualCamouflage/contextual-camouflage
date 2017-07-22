@@ -10,8 +10,8 @@ Installation.create!(
   locality: 'Oakland',
   active: true,
   active_at: '2017-01-01',
-  latitude: 37.8044,
-  longitude: 122.2711,
+  latitude: 40.4420,
+  longitude: -79.9625,
 )
 
 Installation.create!(
@@ -19,7 +19,7 @@ Installation.create!(
   active: true,
   active_at: '2017-01-01',
   latitude: 40.5365,
-  longitude: 80.1844,
+  longitude: -80.1844,
 )
 
 # Parsing illnesses csv to seed db
