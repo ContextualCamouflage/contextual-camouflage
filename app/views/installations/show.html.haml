@@ -24,7 +24,9 @@
         .col.s4.m3.disorder-icon.schizophrenia schizophrenia
         .col.s4.m3.disorder-icon.autism autism
         .col.s4.m3.disorder-icon.ptsd ptsd
-    .s12.m6
-      .map
+    / .s12.m6
+    /   .map
 
-  = render :partial => "submissions/form", :locals => { :submission => Submission.new, :installation => @installation }
+= map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 18, zoomControl: false}, markers: @submissions.map{|sub| {latlng: sub.coordinates}}, id: 'map')
+
+= render :partial => "submissions/form", :locals => { :submission => Submission.new, :installation => @installation }
