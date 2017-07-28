@@ -20,7 +20,7 @@ module ContextualCamoflage
   class Application < Rails::Application
     # TODO add nodejs buildpack to heroku
     # heroku bulidpacks:add 'https://github.com/heroku/heroku-buildpack-nodejs.git'
-    config.asset.paths << Rails.root.join('node_modules')
+    config.assets.paths << Rails.root.join('node_modules')
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
