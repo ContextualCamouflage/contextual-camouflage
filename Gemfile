@@ -24,6 +24,7 @@ gem 'redis', '~> 3.0'
 gem 'time_for_a_boolean'
 gem 'devise'
 gem 'pundit'
+gem 'faker'
 
 gem 'rails_admin'
 
@@ -34,7 +35,6 @@ gem 'burgermenu-rails'
 
 group :development, :test do
   gem 'pry-byebug'
-  gem 'faker'
   gem 'to_factory'
 end
 
