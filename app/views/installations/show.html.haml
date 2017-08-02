@@ -25,4 +25,4 @@
     .col.s12.l6
       .map
         = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 18, zoomControl: false}, markers: @submissions.map{|sub| {latlng: sub.coordinates}}, id: 'map')
-= render :partial => "submissions/form", :locals => { :submission => Submission.new, :installation => @installation }
+= render :partial => "submissions/anecdote", :locals => { :submission => Submission.new, :installation => @installation }
