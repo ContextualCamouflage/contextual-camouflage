@@ -14,8 +14,10 @@ Read more about the Contextual Camouflage project by McKoy Creative: mckoycreati
 
 # Contributors
 
+[Brittany Martin](https://github.com/wonderwoman13)
+[Danielle Greaves](https://github.com/danigirl329)
+[Jeff Waltrowski](https://github.com/jwaltrowski)
+
+# Getting Started
+
 TODO
-
-# Getting Started 
-
-TODO 
