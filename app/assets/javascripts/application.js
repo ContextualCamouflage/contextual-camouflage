@@ -13,7 +13,6 @@
 //= require leaflet
 //= require jquery
 //= require jquery_ujs
-//= require js-cookie
 //= require turbolinks
 //= require burgermenu
 //= require_tree .
