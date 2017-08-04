@@ -1,0 +1,17 @@
+= form_for :story do |f|
+  .fieldset
+    .row
+      .col.s12.m6
+        .person.input-field
+          %h3  I am...
+          %label{for: 'person'}
+          = f.select :person, [["a person who", "me"], ["a person whose loved one", "someone-else"]], class: "browser-default"
+    .row
+      .col.s12.m6
+        %h3 ...lives with one or more of the following diagnosed mental disorders
+        - @illnesses.each do |illness|
+          .illness.input-field
+            %input{type: "checkbox", id: illness.name, name: illness.name}
+            %label{for: illness.name} #{illness.name}
+  = link_to 'Share With Researchers', installation_url, class: "waves-effect waves-light btn"
+  = f.submit value: "I'm finished, project now", class: "waves-effect waves-light btn"

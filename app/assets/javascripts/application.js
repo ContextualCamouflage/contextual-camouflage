@@ -14,5 +14,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require burgermenu
+//= require materialize_init
 //= require_tree .

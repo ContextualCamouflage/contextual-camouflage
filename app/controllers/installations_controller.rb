@@ -6,6 +6,7 @@ class InstallationsController < ApplicationController
   def show
     @installation = Installation.find_by_id(params[:id])
     @submissions = @installation.submissions
+    @illnesses = Illness.all
   end
 
 end
