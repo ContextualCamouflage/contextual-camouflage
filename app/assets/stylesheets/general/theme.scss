@@ -62,7 +62,7 @@ html {
           color: $link-color;
           transition: color 0.5s ease-in-out;
 
-          &:hover {
+          &:hover :not(.btn) {
               color: $link-color-hover;
               transition: color 0.5s ease-in-out;
               text-decoration: none;

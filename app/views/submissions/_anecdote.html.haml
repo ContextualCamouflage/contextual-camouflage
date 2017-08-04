@@ -1,12 +1,12 @@
-= form_for :anecdote, class: "anecdote-form" do |f|
+= form_for :anecdote, html:{class: "submission-form anecdote"} do |f|
   .row
     .col.s12.m6
       %h3 Share Something Personal
       .fieldset
         %label{for: 'anecdote'} Thank you for choosing to share more of your story
-        = text_area :anecdote, cols: 10, rows: 60
+        = text_area(:anecdote, nil, cols: 20, rows: 15)
       .share-more
         %p If you'd like, you can provide information about yourself that will help mental health researchers with their work.
         .input-field
           = link_to 'Share With Researchers', installation_url, class: "waves-effect waves-light btn"
-          = f.submit value: "I'm finished, project now", class: "waves-effect waves-light btn"
+          = f.submit value: "I'm finished, project now", class: "waves-effect waves-light btn save-anecdote"

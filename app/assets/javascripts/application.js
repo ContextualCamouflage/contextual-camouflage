@@ -15,4 +15,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require materialize_init
+//= require submissions/submission_animation
 //= require_tree .
