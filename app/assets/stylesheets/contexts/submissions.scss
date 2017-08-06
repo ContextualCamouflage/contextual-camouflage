@@ -1,3 +1,8 @@
-.submission-form {
-  display: none;
+.submission-forms {
+    width: 90%;
+    margin: 0 auto;
+  .submission-form {
+    display: none;
+    height: 100vh;
+  }
 }
