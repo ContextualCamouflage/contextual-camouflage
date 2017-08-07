@@ -32,6 +32,7 @@ gem 'geocoder'
 gem 'haml-rails'
 gem 'leaflet-rails'
 gem 'burgermenu-rails'
+gem 'non-stupid-digest-assets'
 
 group :development, :test do
   gem 'pry-byebug'
