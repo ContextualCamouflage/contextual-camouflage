@@ -24,7 +24,7 @@
 
     .col.s12.l6
       .map
-        = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 18, zoomControl: false}, markers: @submissions.map{|sub| {latlng: sub.coordinates}}, id: 'map')
+        = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 18, zoomControl: true}, markers: @submissions.map{|sub| {latlng: sub.coordinates, icon: { icon_url: "/assets/#{Illness.find_by_id(sub.illness_id).name.downcase}.png"}}}, id: 'map')
   .row
     .col.s12.m6
       .next-form.btn-large{"data-next-form":"story"} Share My Story
