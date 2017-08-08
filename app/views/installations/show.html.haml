@@ -31,5 +31,5 @@
 
 .submission-forms
   = render :partial => "submissions/story", :locals => { :submission => Submission.new, :installation => @installation }
-  = render :partial => "submissions/anecdote", :locals => { :submission => Submission.new, :installation => @installation }
-  = render :partial => "submissions/research", :locals => { :submission => Submission.new, :installation => @installation }
+  = render :partial => "submissions/anecdote", :locals => { :submission => Anecdote.new, :installation => @installation }
+  = render :partial => "submissions/research", :locals => { :submission => Research.new, :installation => @installation }

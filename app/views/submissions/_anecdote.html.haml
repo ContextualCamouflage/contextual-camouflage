@@ -1,4 +1,4 @@
-= form_for :anecdote, html:{class: "submission-form anecdote"} do |f|
+= form_for submission, html:{class: "submission-form anecdote"} do |f|
   .row
     .col.s12
       %h3 Share Something Personal
@@ -8,5 +8,5 @@
       .share-more
         %p If you'd like, you can provide information about yourself that will help mental health researchers with their work.
         .input-field
-          .next-form.btn{"data-next-form":"research"} Share With Researchers
+          .next-form.btn{"data-this-form":"anecdote","data-next-form":"research"} Share With Researchers
           = f.submit value: "I'm finished, project now", class: "waves-effect waves-light btn save-anecdote"

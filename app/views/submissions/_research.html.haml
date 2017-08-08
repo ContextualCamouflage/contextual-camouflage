@@ -1,4 +1,4 @@
-= form_for :research, html:{class: "submission-form research"} do |f|
+= form_for submission, html:{class: "submission-form research"} do |f|
   .row
     .col.s12.m6
       .fieldset
@@ -16,5 +16,6 @@
           = f.text_field :race
           %label{for: "race"} Race (optional)
         .actions.input-field
-          Thanks for your contribution! Click "Project My Story" below to share your experience with the community.class_selector
+          %p Thanks for your contribution!
+          %p Click "Project My Story" below to share your experience with the community.class_selector
         = f.submit value: "Project My Story", class: "waves-effect waves-light btn save-research"
