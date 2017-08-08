@@ -1,0 +1,18 @@
+= form_for submission, html:{class: "submission-form story"} do |f|
+  .fieldset
+    .row
+      .col.s12.m6
+        .person.input-field
+          %h3  I am...
+          %label{for: 'relationship'}
+          = f.select :relationship, [["a person who", "me"], ["a person whose loved one", "someone-else"]], class: "browser-default"
+    .row
+      .col.s12.m6
+        %h3 ...lives with one or more of the following diagnosed mental disorders
+        - @illnesses.each do |illness|
+          .col.s6.l4
+            .illness.input-field
+              = check_box :illness_id, illness.id
+              %label{for: "illness_id_#{illness.id}"} #{illness.name}
+    .next-form.btn{"data-this-form":"submission", "data-next-form":"anecdote"} Share Something Personal
+    = f.submit value: "I'm finished, project now", class: "waves-effect waves-light btn save-story"

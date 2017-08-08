@@ -14,5 +14,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require burgermenu
+//= require materialize_init
+//= require submissions/submission_animation
 //= require_tree .

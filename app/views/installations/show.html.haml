@@ -25,4 +25,11 @@
     .col.s12.l6
       .map
         = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 18, zoomControl: true}, markers: @submissions.map{|sub| {latlng: sub.coordinates, icon: { icon_url: "/assets/#{Illness.find_by_id(sub.illness_id).name.downcase}.png"}}}, id: 'map')
-= render :partial => "submissions/form", :locals => { :submission => Submission.new, :installation => @installation }
+  .row
+    .col.s12.m6
+      .next-form.btn-large{"data-next-form":"story"} Share My Story
+
+.submission-forms
+  = render :partial => "submissions/story", :locals => { :submission => Submission.new, :installation => @installation }
+  = render :partial => "submissions/anecdote", :locals => { :submission => Anecdote.new, :installation => @installation }
+  = render :partial => "submissions/research", :locals => { :submission => Research.new, :installation => @installation }

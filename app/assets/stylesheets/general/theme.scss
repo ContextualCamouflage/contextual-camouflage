@@ -62,7 +62,7 @@ html {
           color: $link-color;
           transition: color 0.5s ease-in-out;
 
-          &:hover {
+          &:hover :not(.btn) {
               color: $link-color-hover;
               transition: color 0.5s ease-in-out;
               text-decoration: none;
@@ -181,39 +181,6 @@ html {
               &.ptsd:before {
                   background-color: #159993;
               }
-          }
-      }
-
-      .anecdote,
-      .research-info,
-      .story {
-          margin-top: 3em;
-
-          .form-group {
-              clear: both;
-          }
-
-          .disorders {
-              .disorder-checkbox {
-                  width: 100%;
-                  display: block;
-                  float: left;
-                  margin: 0.5em;
-                  @media (min-width: 430px) {
-                      width: 25%;
-                  }
-              }
-          }
-
-          .center-block {
-              width: 100%;
-              @media (min-width: 968px) {
-                  width: 55%;
-              }
-          }
-
-          .actions {
-              text-align: center;
           }
       }
   }
