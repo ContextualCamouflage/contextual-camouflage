@@ -18,8 +18,8 @@ Installation.create!(
   locality: 'Sewickley',
   active: true,
   active_at: '2017-01-01',
-  latitude: 40.5365,
-  longitude: -80.1844,
+  latitude: 40.5775,
+  longitude: -80.1503,
 )
 
 # Parsing illnesses csv to seed db
@@ -35,31 +35,12 @@ end
 illnesses = Illness.all
 
 # Creating random submissions/anecdotes/researches
-20.times do |n|
-  ip = "96.236.157.31"
+70.times do |n|
   Submission.create!(
     illness_id: illnesses.sample.id,
     cookie: "thisismycookie#{rand(10...1000000)}",
     relationship: RELATIONSHIPS.sample,
-    ip_address: ip,
-    locality: "Sewickley",
-    zip_code: "15222",
-    latitude: (40.5365 - Random.new.rand(0.0001...0.0003)),
-    longitude: (-80.1844 + Random.new.rand(0.0001...0.0003))
-  )
-end
-
-20.times do |n|
-  ip = "96.236.157.31"
-  Submission.create!(
-    illness_id: illnesses.sample.id,
-    cookie: "thisismycookie#{rand(10...1000000)}",
-    relationship: RELATIONSHIPS.sample,
-    ip_address: ip,
-    locality: "Sewickley",
-    zip_code: "15222",
-    latitude: (40.5365 + Random.new.rand(0.0001...0.0003)),
-    longitude: (-80.1844 - Random.new.rand(0.0001...0.0003))
+    ip_address: "96.236.157.31"
   )
 end
 
