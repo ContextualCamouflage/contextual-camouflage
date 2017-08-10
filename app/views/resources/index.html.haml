@@ -1,0 +1,6 @@
+%h1 Resources
+.row.disorder-key
+  - @resources.each do |resource|
+    - resource_name = resource.name.downcase
+    .col.s6.m4.l3.disorder-icon{class: resource_name}
+      = link_to resource.name, resource_path(resource)

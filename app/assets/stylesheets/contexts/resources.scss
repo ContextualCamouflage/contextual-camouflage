@@ -1,0 +1,52 @@
+.resources {
+  .resource-info {
+    margin-bottom: 1em;
+  }
+  .carousel-slider {
+    margin-bottom: 1em;
+    .depression {
+          background-color: #03264c;
+      }
+
+      .anxiety {
+          background-color: #ffff00;
+          h1, p {
+          color: #1f1f1f;
+        }
+      }
+
+      .bipolar {
+          background-color: #64f566;
+        h1, p {
+          color: #1f1f1f;
+        }
+      }
+
+      .adhd {
+          background-color: #ff9900;
+          h1, p {
+            color: #1f1f1f;
+          }
+      }
+
+      .dementia {
+          background-color: #7f47dd;
+      }
+
+      .ocd {
+          background-color: #94261c;
+      }
+
+      .schizophrenia {
+          background-color: #8f2750;
+      }
+
+      .autism {
+          background-color: #4a8bcb;
+      }
+
+      .ptsd {
+          background-color: #159993;
+      }
+    }
+  }

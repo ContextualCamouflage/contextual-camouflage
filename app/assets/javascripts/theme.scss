@@ -1,0 +1,252 @@
+@font-face {
+  font-family: 'Avenir Next Condensed';
+  src: url('../fonts/Avenir Next Condensed.ttc') format("ttc");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/Avenir Next.ttc') format("ttc");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/Avenir.ttc') format("ttc");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Light';
+  src: url('../fonts/AvenirLTStd-LightOblique-1.otf') format("otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+  font-size: 16px;
+  background-color: #1a1a1a;
+  background: url('/assets/images/cc-background.jpg');
+  background-repeat: repeat;
+}
+
+.ember-burger-menu .bm-outlet .bm-content {
+  background-color: transparent;
+}
+
+button, input, optgroup, select, textarea {
+  color: #000;
+}
+
+
+.site-name-container {
+  display: inline;
+  float: right;
+  width: 50%;
+  height: 100px;
+  margin-right: auto;
+  overflow: hidden;
+  z-index: 10;
+  .site-name  {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+    height: 100px;
+    max-width: 100%;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    background: $logo no-repeat top right;
+    background-size: 100px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: #f8ffff;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-family: 'Avenir Next';
+  font-size: 1.8em;
+  font-weight: 100;
+}
+h3 {
+  font-size: 1.5em;
+}
+
+h1.header {
+  color: $text-color;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+  margin: 0;
+  line-height: 2em;
+
+  .bold {
+    font-weight: 500;
+  }
+}
+
+.home-header {
+  text-align: center;
+  h1 {
+    line-height: 1em;
+  }
+}
+
+a, a:visited, a:active {
+  color: $link-color;
+  transition: color .5s ease-in-out;
+  &:hover {
+    color: $link-color-hover;
+    transition: color .5s ease-in-out;
+    text-decoration: none;
+  }
+}
+
+.btn-default, a.btn-default {
+  border: 1px solid $blue;
+  border-radius: 5px;
+  box-shadow: 2px 1px 1px $blue;
+  background-color: $light-blue;
+  color: #000;
+  padding: 1em;
+  margin-right: 1em;
+  &:hover {
+    color: #000;
+    background-color: darken($light-blue, 15%);
+    border: 1px solid darken($light-blue, 15%);
+  }
+}
+
+.intro {
+  margin-left: 4em;
+}
+
+.story-link {
+
+}
+
+.location {
+  text-transform: uppercase;
+}
+
+.map  {
+  height: 350px;
+  @media (min-width: 850px) {
+    height: 600px;
+  }
+}
+.map-key {
+  font-size: 0.5em;
+  margin-top: 2em;
+
+  .leaflet-container {
+    height: 400px;
+    min-height: 400px;
+
+    .leaflet-control-attribution {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1em;
+  }
+}
+.disorder-key {
+  .disorder-icon {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    float: left;
+    margin: .5em;
+    white-space: nowrap;
+
+    &.disabled {
+      opacity: 0.5;
+    }
+
+    @media (min-width: 430px) {
+      width: 50%;
+    }
+    @media (min-width: 950px) {
+      width: 40%;
+    }
+    @media (min-width: 1150px) {
+      width: 25%;
+    }
+    &:before {
+      content: "";
+      margin-right: .5em;
+      border-radius: 5px;
+      height: 15px;
+      width: 25px;
+      display: inline-block;
+    }
+    &.depression:before {
+      background-color: #03264c;
+    }
+    &.anxiety:before {
+      background-color: #ffff00;
+    }
+    &.bipolar:before {
+      background-color: #64f566;
+    }
+    &.adhd:before {
+      background-color: #ff9900;
+    }
+    &.dementia:before {
+      background-color: #7f47dd;
+    }
+    &.ocd:before {
+      background-color: #94261c;
+    }
+    &.schizophrenia:before {
+      background-color: #8f2750;
+    }
+    &.autism:before {
+      background-color: #4a8bcb;
+    }
+    &.ptsd:before {
+      background-color: #159993;
+    }
+  }
+}
+
+.story, .anecdote, .research-info {
+  margin-top: 3em;
+
+  .form-group {
+    clear: both;
+  }
+
+  .disorders {
+    .disorder-checkbox {
+      width: 100%;
+      display: block;
+      float: left;
+      margin: .5em;
+      @media (min-width: 430px) {
+        width: 25%;
+      }
+    }
+  }
+
+  .center-block {
+    width: 100%;
+    @media (min-width: 968px) {
+      width: 55%;
+    }
+  }
+
+  .actions {
+    text-align: center;
+  }
+}

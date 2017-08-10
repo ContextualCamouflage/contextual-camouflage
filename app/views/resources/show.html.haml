@@ -1,0 +1,16 @@
+.resources
+  .row
+    .col.s12.l6
+      %h1.header
+        = @resource.name
+      .resource-info
+        = @resource.body
+    .col.s12.l6
+      .carousel.carousel-slider{"data-indicators": "true"}
+        - @anecdotes.each do |anecdote|
+          - resource = @resource.name.downcase
+          .anecdote.carousel-item.center{class: resource}
+            %h1 Personal Story
+            %p #{anecdote.body}
+    .go-back
+      =link_to 'Go back', resources_path, class: 'btn'
