@@ -5,6 +5,7 @@ class ResourcesController < ApplicationController
 
   def show
     @resource = Illness.find_by_id(params[:id])
-    @anecdote = Anecdote.includes(:submission).where(submissions: {illness_id: @resource.id}).order("RANDOM()").first
+    @anecdotes = Anecdote.all.includes(:submission).where(submissions: {illness_id: params[:id]}).order("RANDOM()")
+    # @anecdote = Anecdote.includes(:submission).where(submissions: {illness_id: @resource.id}).order("RANDOM()").first
   end
 end

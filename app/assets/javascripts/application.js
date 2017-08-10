@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require materialize_init
 //= require submissions/submission_animation
+//= require submissions/resource_slider
 //= require_tree .

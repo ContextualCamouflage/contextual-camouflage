@@ -1,14 +1,16 @@
-.installations
+.resources
   .row
     .col.s12.l6
       %h1.header
         = @resource.name
-      .installation-info
+      .resource-info
         = @resource.body
-  .row
     .col.s12.l6
-      %h3.header
-        Anecdote
-      .installation-info
-        = @anecdote.body
-        
+      .carousel.carousel-slider{"data-indicators": "true"}
+        - @anecdotes.each do |anecdote|
+          - resource = @resource.name.downcase
+          .anecdote.carousel-item.center{class: resource}
+            %h1 Personal Story
+            %p #{anecdote.body}
+    .go-back
+      =link_to 'Go back', resources_path, class: 'btn'

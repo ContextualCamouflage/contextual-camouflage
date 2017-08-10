@@ -12,16 +12,10 @@
           = @installation.active_at
       .h4.disorder-header COMMON MENTAL DISORDERS
       .row.disorder-key
-        .col.s6.m4.l3.disorder-icon.depression depression
-        .col.s6.m4.l3.disorder-icon.anxiety anxiety
-        .col.s6.m4.l3.disorder-icon.bipolar bipolar
-        .col.s6.m4.l3.disorder-icon.adhd adhd
-        .col.s6.m4.l3.disorder-icon.dementia dementia
-        .col.s6.m4.l3.disorder-icon.ocd ocd
-        .col.s6.m4.l3.disorder-icon.ptsd ptsd
-        .col.s6.m4.l3.disorder-icon.schizophrenia schizophrenia
-        .col.s6.m4.l3.disorder-icon.autism autism
-
+        - @illnesses.each do |illness|
+          - illness_name = illness.name.downcase
+          .col.s6.m4.l3.disorder-icon{class: illness_name}
+            = link_to illness.name, resource_path(illness.id)
     .col.s12.l6
       .map
         = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 18, zoomControl: true}, markers: @submissions.map{|sub| {latlng: sub.coordinates, icon: { icon_url: "/assets/#{Illness.find_by_id(sub.illness_id).name.downcase}.png"}}}, id: 'map')
