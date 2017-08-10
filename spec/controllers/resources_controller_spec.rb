@@ -39,7 +39,7 @@ RSpec.describe ResourcesController, type: :controller do
 
     it "assigns anecdote to @anecdote" do
       get :show, params: { id: @illness.id }
-      expect(assigns(:anecdote)).to eq(@anecdote)
+      expect(assigns(:anecdote)).to eq(@anecdotes)
     end
   end
 
