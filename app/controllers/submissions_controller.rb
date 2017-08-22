@@ -11,7 +11,7 @@ class SubmissionsController < ApplicationController
     @submission.cookie = session['session_id']
     if @submission.save
       ActionCable.server.broadcast 'map_channel',
-                                   id: @submission.id, latitude: @submission.latitude, longitude: @submission.longitude, illness_id: @submission.illness_id
+                                   id: @submission.id, latitude: @submission.latitude, longitude: @submission.longitude, illness_name: "#{Illness.find_by_id(@submission.illness_id).name.downcase}.png"
     else
       redirect_to @submission.installation
     end
