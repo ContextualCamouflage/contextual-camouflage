@@ -10,10 +10,6 @@ class Submission < ApplicationRecord
     set_location(location) if location
   end
 
-  def coordinates
-    [self.latitude, self.longitude]
-  end
-
 private
 
   def set_location(location)
