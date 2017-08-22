@@ -8,10 +8,11 @@ User.create!(
 
 Installation.create!(
   locality: 'Oakland',
-  active: true,
+  active: false,
   active_at: '2017-01-01',
   latitude: 40.4420,
   longitude: -79.9625,
+  display_name: 'Oakland'
 )
 
 Installation.create!(
@@ -20,6 +21,7 @@ Installation.create!(
   active_at: '2017-01-01',
   latitude: 40.5775,
   longitude: -80.1503,
+  display_name: 'Sewickley'
 )
 
 Installation.create!(
@@ -28,6 +30,7 @@ Installation.create!(
   active_at: '2017-08-01',
   latitude: 40.3377,
   longitude: -79.8428,
+  display_name: 'Downtown'
 )
 
 # Parsing illnesses csv to seed db
@@ -48,7 +51,7 @@ illnesses = Illness.all
     illness_id: illnesses.sample.id,
     cookie: "thisismycookie#{rand(10...1000000)}",
     relationship: RELATIONSHIPS.sample,
-    ip_address: "96.236.157.31"
+    ip_address: '96.236.157.31'
   )
 end
 
