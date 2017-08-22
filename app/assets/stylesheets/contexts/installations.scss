@@ -1,5 +1,16 @@
-.installations {
-  .active, .activated, .installation-info {
-    color: $text-color;
+.main {
+  .installation-home {
+    .installation-list {
+      .btn-large {
+        margin-top: 1em;
+      }
+    }
   }
+
+  .installations {
+    .active, .activated, .installation-info {
+      color: $text-color;
+    }
+  }
+
 }
