@@ -3,5 +3,5 @@
   .installation-list.row
     .col.s4
       - @installations.each do |installation|
-        - active_class = installation.active == false ? "red" : ""
-        = link_to installation.locality, installation_path(installation), class: "btn-large #{active_class}"
+        - active_class = installation.active == false ? 'red' : ''
+        = link_to installation.display_name, installation_path(installation), class: "btn-large #{active_class}"
