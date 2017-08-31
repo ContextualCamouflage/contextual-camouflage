@@ -1,0 +1,35 @@
+header {
+  .side-nav {
+    padding-top: 2em;
+    background-color: $blue;
+    li a {
+      color: $text-color;
+      font-size: 1.3rem;
+    }
+  }
+  .site-name-container {
+    display: inline;
+    height: 100px;
+    @media (min-width: 2000px) {
+      height: 200px;
+    }
+    .site-name {
+        display: none;
+    }
+    .logo {
+      display: block;
+      height: 100px;
+      background: $logo no-repeat top right;
+      background-size: 100px;
+      @media (min-width: 320px) {
+        width: 100px;
+        margin: 1em auto;
+      }
+      @media (min-width: 2000px) {
+        height: 200px;
+        width: 200px;
+        background-size: 200px;
+      }
+    }
+  }
+}

@@ -69,30 +69,7 @@ html {
           }
       }
 
-      .site-name-container {
-          display: inline;
-          height: 100px;
-          @media (min-width: 2000px) {
-            height: 200px;
-          }
-          .site-name {
-              display: none;
-          }
-
-          .logo {
-              display: block;
-              height: 100px;
-              width: 100px;
-              margin: 1em auto;
-              background: $logo no-repeat top right;
-              background-size: 100px;
-              @media (min-width: 2000px) {
-                height: 200px;
-                width: 200px;
-                background-size: 200px;
-              }
-          }
-      }
+      
       .btn-default,
       a.btn-default {
           border: 1px solid $blue;
