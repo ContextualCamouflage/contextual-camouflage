@@ -5,13 +5,21 @@
     %meta{:name => "viewport", content: "width=device-width, initial-scale=1"}
     %title ContextualCamoflage
     = csrf_meta_tags
+    = stylesheet_link_tag    'https://fonts.googleapis.com/icon?family=Material+Icons'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
   %body
     %header.row
-      .nav.col.s12.m4.l2
-      .col.s12.m4.l8
-      .site-name-container.col.s12.m4.l2
+      .nav.col.s12.m6
+        %ul.side-nav#slide-out
+          %li
+            = link_to "Installations", installations_url
+          %li
+            = link_to "Resources", resources_url
+        = link_to '#', class: "button-collapse", "data-activates": "slide-out" do
+          %i.material-icons menu
+      .site-name-container.col.s12.m6
         .site-name Contextual Camouflage Click to go Home
         = link_to '', root_url, class: 'logo'
     .main
