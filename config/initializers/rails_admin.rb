@@ -38,4 +38,25 @@ RailsAdmin.config do |config|
     delete
     show_in_app
   end
+
+  config.model 'Installation' do
+    list do
+      field :display_name
+      field :locality
+      field :active
+      field :active_at
+    end
+
+    edit do
+      field :display_name
+      field :latitude do 
+        required true
+      end  
+      field :longitude do 
+        required true
+      end  
+      field :active
+      field :active_at
+    end
+  end
 end
