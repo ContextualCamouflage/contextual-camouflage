@@ -4,6 +4,7 @@ class Submission < ApplicationRecord
   has_many :researches
   validate :double_submit_same_illness
   before_save :geocode_location
+  before_save :active_installation
 
   def geocode_location
     location = Geocoder.search(self.ip_address, ip_address: true).first
@@ -23,6 +24,12 @@ private
     if Submission.exists?(cookie: self.cookie, illness_id: self.illness_id)
       errors.add(:cookie, "User already submitted this illness.")
     end
+  end
+
+  def active_installation
+    if !self.installation.active
+      throw :abort
+    end  
   end
   
 end

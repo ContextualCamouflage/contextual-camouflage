@@ -4,7 +4,7 @@ RSpec.describe ResourcesController, type: :controller do
 
   before do
     @illness = FactoryGirl.create(:illness)
-    installation = FactoryGirl.create(:installation, locality: "Oakland")
+    installation = FactoryGirl.create(:installation, locality: "Sewickley")
     submission = FactoryGirl.create(:submission, illness_id: @illness.id, locality: installation.locality)
     @anecdote = FactoryGirl.create(:anecdote, submission_id: submission.id)
   end
