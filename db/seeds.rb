@@ -25,11 +25,11 @@ Installation.create!(
 )
 
 Installation.create!(
-  locality: 'McKeesport',
+  locality: 'Pittsburgh',
   active: true,
   active_at: '2017-08-01',
-  latitude: 40.3377,
-  longitude: -79.8428,
+  latitude: 40.4223,
+  longitude: -79.9791,
   display_name: 'Downtown'
 )
 
@@ -46,12 +46,21 @@ end
 illnesses = Illness.all
 
 # Creating random submissions/anecdotes/researches
-70.times do |n|
+35.times do |n|
   Submission.create!(
     illness_id: illnesses.sample.id,
     cookie: "thisismycookie#{rand(10...1000000)}",
     relationship: RELATIONSHIPS.sample,
-    ip_address: '96.236.157.31'
+    ip_address: '23.25.80.129'
+  )
+end
+
+35.times do |n|
+  Submission.create!(
+    illness_id: illnesses.sample.id,
+    cookie: "thisismycookie#{rand(10...1000000)}",
+    relationship: RELATIONSHIPS.sample,
+    ip_address: '71.112.159.0'
   )
 end
 
