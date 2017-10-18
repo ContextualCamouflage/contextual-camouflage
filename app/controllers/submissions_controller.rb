@@ -8,6 +8,7 @@ class SubmissionsController < ApplicationController
     @submission = Submission.create(submission_params)
     @submission.ip_address = request.remote_ip
     @submission.geocode_location
+    # will refactor to grab the user's _cc cookie 
     @submission.cookie = session['session_id']
     if @submission.save
       ActionCable.server.broadcast 'map_channel',
