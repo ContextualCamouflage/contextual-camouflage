@@ -9,7 +9,6 @@ class Submission < ApplicationRecord
   def geocode_location
     downtown_check
     location = Geocoder.search(self.ip_address, ip_address: true).first
-    location.data["city"].present? ? set_location(location) : set_pittsburgh(location)
     set_location(location)
   end
 
