@@ -26,13 +26,21 @@ function submitForm(form) {
   $("[data-this-form]").bind("click", function(evt) {
     var formName = $(evt.currentTarget).attr("data-this-form");
     var form = $("#new_" + formName);
-    // submitAjax(form);
+    submitAjax(form);
   });
 }
 
-// function submitAjax(form) {
-//   var formUrl = form.attr("action");
-//   $.ajax({
-//     url: formUrl
-//   });
-// }
+function submitAjax(form) {
+  var formUrl = form.attr("action");
+  $.ajax({
+    type: "POST",
+    url: formUrl,
+    data: $(form).serialize(),
+    success: function() {
+      console.log("success");
+    },
+    error: function() {
+      console.log("error");
+    }
+  });
+}
