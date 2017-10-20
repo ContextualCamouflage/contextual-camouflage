@@ -1,9 +1,10 @@
 $(document).on('turbolinks:load', function() {
-  animateToAnecdote();
+  animateForm();
   submitForm();
+  submitAndResetForm();
 });
 
-function animateToAnecdote() {
+function animateForm() {
   var current = "research";
     $("[data-next-form]").bind('click', function (evt) {
         var el = $(evt.currentTarget).attr('data-next-form');
@@ -22,7 +23,25 @@ function animateToAnecdote() {
     });
 }
 
+function submitAndResetForm() {
+  animateForm();
+  $('.submission-form').on('submit', function(e) {
+    e.preventDefault();
+    // submit the form with ajax
+    submitForm($(this));
+    // reset the forms(close it)
+    $('.submission-form').each(function() {
+      $(this).hide();
+      $(this)[0].reset();
+    });
+    // scroll to the top of the page
+
+    // throw out the cookie maybe
+  });
+}
+
 function submitForm(form) {
+  animateForm();
   $("[data-this-form]").bind("click", function(evt) {
     var formName = $(evt.currentTarget).attr("data-this-form");
     var form = $("#new_" + formName);
