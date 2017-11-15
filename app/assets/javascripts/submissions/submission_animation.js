@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function() {
 
 function animateForm() {
   var current = "research";
-    $("[data-next-form]").bind('click', function (evt) {
+    $("[data-next-form]").on('click', function (evt) {
         var el = $(evt.currentTarget).attr('data-next-form');
         if (el === current) return;
 
@@ -27,22 +27,17 @@ function submitAndResetForm() {
   animateForm();
   $('.submission-form').on('submit', function(e) {
     e.preventDefault();
-    // submit the form with ajax
-    submitForm($(this));
-    // reset the forms(close it)
+    submitAjax($(this));
     $('.submission-form').each(function() {
       $(this).hide();
       $(this)[0].reset();
     });
-    // scroll to the top of the page
-
-    // throw out the cookie maybe
   });
 }
 
 function submitForm(form) {
   animateForm();
-  $("[data-this-form]").bind("click", function(evt) {
+  $("[data-this-form]").on("click", function(evt) {
     var formName = $(evt.currentTarget).attr("data-this-form");
     var form = $("#new_" + formName);
     submitAjax(form);
