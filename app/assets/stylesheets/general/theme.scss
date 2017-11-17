@@ -6,7 +6,6 @@ html {
       background-color: #1a1a1a;
       background: image-url('cc-background.jpg');
       background-repeat: repeat;
-      margin: 2em;
       @media (min-width: 2000px) {
         font-size: 2em;
         margin: 4em;
@@ -69,7 +68,7 @@ html {
           }
       }
 
-      
+
       .btn-default,
       a.btn-default {
           border: 1px solid $blue;

@@ -4,13 +4,19 @@
   }
   .carousel-slider {
     margin-bottom: 1em;
+    .indicators .indicator-item.active {
+      transform: scale(1.5,1.5);
+    }
+    .carousel-item {
+      padding: 1em;
+    }
     .depression {
-          background-color: #03264c;
+        background-color: #03264c;
       }
 
       .anxiety {
           background-color: #ffff00;
-          h1, p {
+          h1, p, div {
           color: #1f1f1f;
         }
       }
