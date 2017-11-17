@@ -1,17 +1,12 @@
 class AnecdotesController < ApplicationController
 
   def create
-    @anecdote  = Anecdote.create(anecdote_params)
+    #TODO: why am I getting an array from the Frontend? Can this be a string field?
+    #I'd like to remove the .first on the next line
+    anecdote = params[:anecdote].first
+    submission = Submission.find_by_cookie(cookies[:cc]).id
+    @anecdote  = Anecdote.create(body: anecdote, submission_id: submission)
+    @anecdote.save!
   end
 
-  def random
-    # random = Anecdote.all.includes(:submission).where(submissions: {illness: params[:illness]}).sample
-    # render json: random.to_json, status: 200
-  end
-
-private
-
-  def anecdote_params
-    params.require(:anecdote).permit(:body, :submission_id)
-  end
 end

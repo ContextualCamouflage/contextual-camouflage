@@ -1,15 +1,16 @@
 class SubmissionsController < ApplicationController
+
   def index
     illness_counts = count_by_illness(params[:city])
     render json: illness_counts.to_json, status: 200
   end
 
   def create
-    @submission = Submission.create(submission_params)
+    cookies[:cc] = (0...20).map { (65 + rand(26)).chr }.join
+    final_params = submission_params.merge({:cookie => cookies[:cc]})
+    @submission = Submission.create(final_params)
     @submission.ip_address = request.remote_ip
     @submission.geocode_location
-    # will refactor to grab the user's _cc cookie
-    @submission.cookie = session['session_id']
     if @submission.save
       ActionCable.server.broadcast 'map_channel',
                                    id: @submission.id, latitude: @submission.latitude, longitude: @submission.longitude, illness_name: "#{Illness.find_by_id(@submission.illness_id).name.downcase}.png"
