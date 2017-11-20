@@ -1,11 +1,12 @@
 $(document).on('turbolinks:load', function() {
-  animateToAnecdote();
+  animateForm();
   submitForm();
+  submitAndResetForm();
 });
 
-function animateToAnecdote() {
+function animateForm() {
   var current = "research";
-    $("[data-next-form]").bind('click', function (evt) {
+    $("[data-next-form]").on('click', function (evt) {
         var el = $(evt.currentTarget).attr('data-next-form');
         if (el === current) return;
 
@@ -22,17 +23,38 @@ function animateToAnecdote() {
     });
 }
 
-function submitForm(form) {
-  $("[data-this-form]").bind("click", function(evt) {
-    var formName = $(evt.currentTarget).attr("data-this-form");
-    var form = $("#new_" + formName);
-    // submitAjax(form);
+function submitAndResetForm() {
+  animateForm();
+  $('.submission-form').on('submit', function(e) {
+    e.preventDefault();
+    submitAjax($(this));
+    $('.submission-form').each(function() {
+      $(this).hide();
+      $(this)[0].reset();
+    });
   });
 }
 
-// function submitAjax(form) {
-//   var formUrl = form.attr("action");
-//   $.ajax({
-//     url: formUrl
-//   });
-// }
+function submitForm(form) {
+  animateForm();
+  $("[data-this-form]").on("click", function(evt) {
+    var formName = $(evt.currentTarget).attr("data-this-form");
+    var form = $("#new_" + formName);
+    submitAjax(form);
+  });
+}
+
+function submitAjax(form) {
+  var formUrl = form.attr("action");
+  $.ajax({
+    type: "POST",
+    url: formUrl,
+    data: $(form).serialize(),
+    success: function() {
+      console.log("success");
+    },
+    error: function() {
+      console.log("error");
+    }
+  });
+}

@@ -11,14 +11,10 @@ RSpec.describe AnecdotesController, type: :controller do
 
   describe '#create' do
     it 'works' do
+      @request.cookies['cc'] = @submission.cookie
       post :create, params: {anecdote: {body: "Here is a body!", submission_id: @submission.id}}
       expect(assigns(:anecdote)).to eq Anecdote.last
     end
   end
-
-  # describe '#random' do
-  #   it 'works' do
-  #   end
-  # end
 
 end

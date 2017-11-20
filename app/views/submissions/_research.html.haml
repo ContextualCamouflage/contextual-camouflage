@@ -4,18 +4,18 @@
       .fieldset
         %h3 Help improve mental health research
         .age.input-field
-          %label{for: "age"}
+          %label{for: "research_age"}
           = f.select :age, [["18 or younger", ""],["18-24",""],["25-34",""],["35-44",""],["45-54",""],["55-64",""],["65+",""]]
         .occupation.input-field
           = f.text_field :occupation
-          %label{for: "occupation"} Occupation
+          %label{for: "research_occupation"} Occupation
         .gender.input-field
           = f.text_field :gender
-          %label{for: "gender"} Gender Identity (optional)
+          %label{for: "research_gender"} Gender Identity (optional)
         .race.input-field
           = f.text_field :race
-          %label{for: "race"} Race (optional)
+          %label{for: "research_race"} Race (optional)
         .actions.input-field
           %p Thanks for your contribution!
           %p Click "Project My Story" below to share your experience with the community.class_selector
-        = f.submit value: "Project My Story", class: "waves-effect waves-light btn save-research"
+        = f.submit value: "Project My Story", class: "waves-effect waves-light btn save-research", "data-this-form":"research", "data-next-form":"index"

@@ -24,6 +24,6 @@
       .next-form.btn-large{"data-next-form":"story"} Share My Story
 
 .submission-forms
-  = render :partial => "submissions/story", :locals => { :submission => Submission.new, :installation => @installation }
+  = render :partial => "submissions/submission", :locals => { :submission => Submission.new, :installation => @installation }
   = render :partial => "submissions/anecdote", :locals => { :submission => Anecdote.new, :installation => @installation }
   = render :partial => "submissions/research", :locals => { :submission => Research.new, :installation => @installation }

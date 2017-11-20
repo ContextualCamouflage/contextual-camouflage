@@ -15,4 +15,4 @@
               = f.radio_button "illness_id", illness.id
               %label{for: "submission_illness_id_#{illness.id}"} #{illness.name}
     .next-form.btn{"data-this-form":"submission", "data-next-form":"anecdote"} Share Something Personal
-    = f.submit value: "I'm finished, project now", class: "waves-effect waves-light btn save-story"
+    = f.submit value: "I'm finished, project now", class: "waves-effect waves-light btn save-story", "data-this-form":"submission", "data-next-form":"index"
