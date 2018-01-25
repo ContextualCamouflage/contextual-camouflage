@@ -8,16 +8,20 @@
 
 [![Issue Count](https://codeclimate.com/github/codeclimate/codeclimate/badges/issue_count.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
-McKoy Creative is creating an interactive art project aimed at combating stigma around mental health using real-time GIS display projecting in public locations in Pittsburgh, PA. They envision an app that will disseminate research around mental health stigma while displaying a real-time projection of people reporting their mental disorder experience from a specific location.
+McKoy Creative created an interactive art project aimed at combating stigma around mental health using real-time GIS display projecting in public locations in Pittsburgh, PA. They envision an app that will disseminate research around mental health stigma while displaying a real-time projection of people reporting their mental disorder experience from a specific location.
 
-Read more about the Contextual Camouflage project by McKoy Creative: mckoycreative.com/contextual-camouflage
+Read more about the Contextual Camouflage project by [McKoy Creative](mckoycreative.com/contextual-camouflage)
 
 # Contributors
 
-[Brittany Martin](https://github.com/wonderwoman13)
-[Danielle Greaves](https://github.com/danigirl329)
-[Jeff Waltrowski](https://github.com/jwaltrowski)
+* [Brittany Martin](https://github.com/wonderwoman13)
+* [Danielle Greaves](https://github.com/danigirl329)
+* [Jeff Waltrowski](https://github.com/jwaltrowski)
 
 # Getting Started
 
-TODO
+[Wiki](https://github.com/ContextualCamouflage/contextual-camoflage/wiki)
+
+# Instant Deployment
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
