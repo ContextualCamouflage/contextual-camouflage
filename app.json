@@ -1,0 +1,9 @@
+{
+  "name": "contextual-camouflage",
+  "description": "Erasing the Stigma Around Mental Illness",
+  "repository": "https://github.com/Brit200313/alliance",
+  "keywords": ["rails", "jquery", "actioncable"],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  }
+}
