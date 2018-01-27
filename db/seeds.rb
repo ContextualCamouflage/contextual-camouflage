@@ -33,6 +33,15 @@ Installation.create!(
   display_name: 'Downtown'
 )
 
+Installation.create!(
+  locality: 'Coraopolis',
+  active: false,
+  active_at: '2017-01-01',
+  latitude: 40.4998,
+  longitude: -80.1842,
+  display_name: 'Clinton'
+)
+
 # Parsing illnesses csv to seed db
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'illnesses.csv'))
 csv = CSV.parse(csv_text, :headers => true)
