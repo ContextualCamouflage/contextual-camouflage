@@ -1,6 +1,7 @@
 class InstallationsController < ApplicationController
   def index
     @installations = Installation.all
+    @interest = Interest.new
   end
 
   def show

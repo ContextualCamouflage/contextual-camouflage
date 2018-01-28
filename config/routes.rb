@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   
   resources :researches, only: [:create]
   resources :resources, only: [:index, :show]
+
+  resources :interests, only: [:create]
   
   root 'installations#index'
 
