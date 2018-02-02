@@ -49,6 +49,7 @@ RailsAdmin.config do |config|
 
     edit do
       field :display_name
+      field :locality
       field :latitude do 
         required true
       end  
