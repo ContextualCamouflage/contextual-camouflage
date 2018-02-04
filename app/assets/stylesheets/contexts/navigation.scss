@@ -22,12 +22,10 @@ header {
       background: $logo no-repeat top right;
       background-size: 100px;
       @media (min-width: 320px) {
-        width: 100px;
         margin: 1em auto;
       }
       @media (min-width: 2000px) {
         height: 200px;
-        width: 200px;
         background-size: 200px;
       }
     }

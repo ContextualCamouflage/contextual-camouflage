@@ -11,6 +11,13 @@
     .active, .activated, .installation-info {
       color: $text-color;
     }
+    &.main-display {
+      #map {
+        height: 960px;
+      }
+      .resources {
+        margin-top: 2em;
+      }
+    }
   }
-
 }

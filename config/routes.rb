@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   resources :submissions, only: [:create, :index]
   resources :anecdotes, only: [:create]
   get '/anecdotes/random', to: 'anecdotes#random'
-  
+  get '/display/:id', to: 'installations#main'
+
   resources :illnesses, only: [:index, :show]
-  
+
   resources :researches, only: [:create]
   resources :resources, only: [:index, :show]
-  
+
   root 'installations#index'
 
   mount ActionCable.server, at: '/cable'
