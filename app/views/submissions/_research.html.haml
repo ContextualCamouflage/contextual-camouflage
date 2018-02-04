@@ -5,7 +5,7 @@
         %h3 Help improve mental health research
         .age.input-field
           %label{for: "research_age"}
-          = f.select :age, [["18 or younger", ""],["18-24",""],["25-34",""],["35-44",""],["45-54",""],["55-64",""],["65+",""]]
+          = f.select :age, [["18 or younger", "<18"],["18-24","18-24"],["25-34","25-34"],["35-44","35-44"],["45-54","45-54"],["55-64","55-64"],["65+","65+"]]
         .occupation.input-field
           = f.text_field :occupation
           %label{for: "research_occupation"} Occupation
