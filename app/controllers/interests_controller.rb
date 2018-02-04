@@ -1,8 +1,11 @@
 class InterestsController < ApplicationController
 
   def create
-    Interest.create!(interest_params)
-    # redirect_back(fallback_location: root_path)
+    begin
+      Interest.create!(interest_params)
+    rescue ActiveRecord::RecordInvalid => e
+      head :ok if e.message == 'Validation failed: Email has already been taken'
+    end
     head :ok
   end
 
