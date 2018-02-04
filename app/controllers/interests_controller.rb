@@ -2,7 +2,8 @@ class InterestsController < ApplicationController
 
   def create
     Interest.create!(interest_params)
-    redirect_back(fallback_location: root_path)
+    # redirect_back(fallback_location: root_path)
+    head :ok
   end
 
   private

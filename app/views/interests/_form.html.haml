@@ -3,4 +3,8 @@
     %label.form-label I am interested in
     = f.select(:topic, [["Hosting an Installation", "Host"],["Visiting an Installation","Visit"]])
     = f.text_field :email, placeholder: 'Enter your email.'
-  = f.button "Submit", class: 'btn waves-effect waves-light'
+    = f.button "Submit", class: 'btn waves-effect waves-light email-submit'
+.thanks
+  %h3 Thanks for your interest!
+  %p Someone will be in contact with you soon!
+.error

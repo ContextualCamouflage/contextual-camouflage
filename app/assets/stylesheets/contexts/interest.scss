@@ -1,4 +1,16 @@
 .interest {
+  position: relative;
   padding: 1em;
   background-color: rgba(0,0,0,0.3);
+  .thanks {
+    position: absolute;
+    top: 0;
+    display: none;
+  }
+  .error {
+    display: none;
+    background-color: #ef5350;
+    padding: 1em;
+    margin: 1em 0;
+  }
 }
