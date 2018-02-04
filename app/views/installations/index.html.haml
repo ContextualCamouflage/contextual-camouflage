@@ -5,3 +5,7 @@
       - @installations.each do |installation|
         - active_class = installation.active == false ? 'red' : ''
         = link_to installation.display_name, installation_path(installation), class: "btn-large #{active_class}"
+%h1 Subscribe
+.installation-list.row
+  .col.s4
+    = render :partial => 'interests/form'

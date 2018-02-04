@@ -1,0 +1,5 @@
+= form_for @interest do |f|
+  .form-group
+    = f.select(:topic, [["Hosting an Installation", "Host"],["Visiting an Installation","Visit"]])
+    = f.text_field :email, placeholder: 'Enter your email.'
+  = f.button "Submit", class: 'btn waves-effect waves-light'

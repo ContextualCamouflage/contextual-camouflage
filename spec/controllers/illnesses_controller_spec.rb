@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe IllnessesController, type: :controller do
 
   before do
-    @illness = FactoryGirl.create(:illness)
+    @illness = FactoryBot.create(:illness)
   end
 
   describe '#index' do

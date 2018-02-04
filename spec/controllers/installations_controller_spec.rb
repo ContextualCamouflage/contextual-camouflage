@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe InstallationsController, type: :controller do
 
   before do
-    @installation = FactoryGirl.create(:installation)
+    @installation = FactoryBot.create(:installation)
   end
 
   describe '#index' do

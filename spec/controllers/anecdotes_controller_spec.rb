@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe AnecdotesController, type: :controller do
 
   before do
-    FactoryGirl.create(:installation)
-    illness = FactoryGirl.create(:illness)
-    @submission = FactoryGirl.create(:submission, illness_id: illness.id)
-    @anecdote = FactoryGirl.create(:anecdote, submission_id: @submission.id)
+    FactoryBot.create(:installation)
+    illness = FactoryBot.create(:illness)
+    @submission = FactoryBot.create(:submission, illness_id: illness.id)
+    @anecdote = FactoryBot.create(:anecdote, submission_id: @submission.id)
   end
 
   describe '#create' do

@@ -52,7 +52,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'simplecov'
   gem 'rails-controller-testing'
   gem 'capybara'

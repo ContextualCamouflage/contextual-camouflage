@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory(:submission) do
     cookie "thisismycookie181489"
     ip_address "96.236.157.31"
