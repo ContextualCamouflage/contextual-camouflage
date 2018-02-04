@@ -27,7 +27,6 @@ function submitAndResetForm() {
   animateForm();
   $('.submission-form').on('submit', function(e) {
     e.preventDefault();
-    submitAjax($(this));
     $('.submission-form').each(function() {
       $(this).hide();
       $(this)[0].reset();
