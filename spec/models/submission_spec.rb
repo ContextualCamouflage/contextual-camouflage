@@ -10,6 +10,7 @@ RSpec.describe Submission, type: :model do
 
   it { is_expected.to have_many(:researches) }
   it { is_expected.to have_many(:anecdotes) }
+  it { validate_presence_of :illness_id }
 
   describe 'active_installation' do
     it 'is active' do
