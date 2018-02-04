@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe ResourcesController, type: :controller do
 
   before do
-    @illness = FactoryGirl.create(:illness)
-    installation = FactoryGirl.create(:installation, locality: "Sewickley")
-    submission = FactoryGirl.create(:submission, illness_id: @illness.id, locality: installation.locality)
-    @anecdote = FactoryGirl.create(:anecdote, submission_id: submission.id)
+    @illness = FactoryBot.create(:illness)
+    installation = FactoryBot.create(:installation, locality: "Sewickley")
+    submission = FactoryBot.create(:submission, illness_id: @illness.id, locality: installation.locality)
+    @anecdote = FactoryBot.create(:anecdote, submission_id: submission.id)
   end
 
   describe '#index' do

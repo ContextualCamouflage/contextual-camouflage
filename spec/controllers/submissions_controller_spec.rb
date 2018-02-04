@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe SubmissionsController, type: :controller do
 
   before(:each) do
-    @illness = FactoryGirl.create(:illness)
-    @installation = FactoryGirl.create(:installation, locality: '')
+    @illness = FactoryBot.create(:illness)
+    @installation = FactoryBot.create(:installation, locality: '')
   end
 
   # describe '#create' do

@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe ResearchesController, type: :controller do
 
   before do
-    FactoryGirl.create(:installation)
-    illness = FactoryGirl.create(:illness)
-    @submission = FactoryGirl.create(:submission, illness_id: illness.id)
+    FactoryBot.create(:installation)
+    illness = FactoryBot.create(:illness)
+    @submission = FactoryBot.create(:submission, illness_id: illness.id)
   end
 
   describe '#create' do

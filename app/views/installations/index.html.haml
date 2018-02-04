@@ -1,7 +1,13 @@
-.installation-home
-  %h1 Installations
-  .installation-list.row
-    .col.s4
+.container
+  .row
+    %h1 Subscribe
+  .row.interest
+    = render :partial => 'interests/form'
+  .row
+    .installation-home
+      %h1 Installations
+  .row
+    .installation-list
       - @installations.each do |installation|
         - active_class = installation.active == false ? 'red' : ''
         = link_to installation.display_name, installation_path(installation), class: "btn-large #{active_class}"
