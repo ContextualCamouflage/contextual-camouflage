@@ -33,6 +33,7 @@ gem 'haml-rails'
 gem 'leaflet-rails'
 gem 'burgermenu-rails'
 gem 'non-stupid-digest-assets'
+gem 'rollbar'
 
 group :development, :test do
   gem 'pry-byebug'
