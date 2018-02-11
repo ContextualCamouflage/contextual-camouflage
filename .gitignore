@@ -23,5 +23,7 @@
 /coverage/*
 
 /public/assets/*
+config/secrets.yml
+
 
 .idea

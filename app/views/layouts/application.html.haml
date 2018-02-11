@@ -8,6 +8,14 @@
     = stylesheet_link_tag    'https://fonts.googleapis.com/icon?family=Material+Icons'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    = javascript_include_tag "https://www.googletagmanager.com/gtag/js?id=#{Rails.application.secrets[:google_analytics]}", async:'async'
+    %script
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', ga_code);
 
   %body
     %header.row
