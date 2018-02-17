@@ -1,4 +1,5 @@
 class SubmissionsController < ApplicationController
+  before_action :set_session_cookie, only: :create
 
   def index
     illness_counts = count_by_illness(params[:city])
@@ -6,8 +7,7 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    cookies[:cc] = (0...20).map { (65 + rand(26)).chr }.join
-    final_params = submission_params.merge({:cookie => cookies[:cc]})
+    final_params = submission_params.merge({:cookie => session[:cc]})
     @submission = Submission.create(final_params)
     @submission.ip_address = request.remote_ip
     @submission.geocode_location
@@ -23,6 +23,10 @@ class SubmissionsController < ApplicationController
 
   def submission_params
     params.require(:submission).permit(:relationship, :ip_address, :illness_id, :locality)
+  end
+
+  def set_session_cookie
+    session[:cc] = (0...50).map { (65 + rand(26)).chr }.join if session[:cc].nil?
   end
 
   def count_by_illness(city)
