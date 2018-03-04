@@ -17,6 +17,7 @@
 //= require materialize_init
 //= require submissions/submission_animation
 //= require submissions/resource_slider
+//= require submissions/geolocate
 //= require interests/emailSubmit
 //= require cable
 //= require_tree .
