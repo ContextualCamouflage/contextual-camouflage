@@ -38,11 +38,11 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  config.action_cable.url = 'wss://contextual-camo-staging.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = ['https://contextual-camo-staging.herokuapp.com/']
+  config.action_cable.url = ENV['ACTION_CABLE_URL']
+  config.action_cable.allowed_request_origins = [ENV['ACTION_CABLE_ORIGIN']]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
