@@ -1,10 +1,16 @@
 class AnecdotesController < ApplicationController
 
   def create
-    anecdote = params[:anecdote]
-    submission = Submission.find_by_cookie(cookies[:cc]).id
+    anecdote = anecdote_params[:anecdote]
+    submission = Submission.find_by_id(session[:id]).id
     @anecdote  = Anecdote.create(body: anecdote, submission_id: submission)
-    @anecdote.save!
+    @anecdote.save
+  end
+
+  private
+
+  def anecdote_params
+    params.permit(:anecdote)
   end
 
 end

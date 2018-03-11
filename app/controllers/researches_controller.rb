@@ -1,9 +1,9 @@
 class ResearchesController < ApplicationController
 
   def create
-    final_params = research_params.merge({:submission_id => Submission.find_by_cookie(cookies[:cc]).id})
+    final_params = research_params.merge({:submission_id => Submission.find_by_id(session[:id]).id})
     @research = Research.create(final_params)
-    @research.save!
+    @research.save
   end
 
   private
