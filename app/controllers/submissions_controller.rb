@@ -12,17 +12,18 @@ class SubmissionsController < ApplicationController
     @submission.ip_address = request.remote_ip
     @submission.geocode_location
     if @submission.save
+      session[:id] = @submission.id
       ActionCable.server.broadcast 'map_channel',
                                    id: @submission.id, latitude: @submission.latitude, longitude: @submission.longitude, illness_name: "#{Illness.find_by_id(@submission.illness_id).name.downcase}.png"
     else
-      redirect_to @submission.installation
+      redirect_back(fallback_location: root_path)
     end
   end
 
   private
 
   def submission_params
-    params.require(:submission).permit(:relationship, :ip_address, :illness_id, :locality)
+    params.require(:submission).permit(:relationship, :latitude, :longitude, :illness_id, :locality)
   end
 
   def set_session_cookie
