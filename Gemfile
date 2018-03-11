@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails'
+gem 'rails', github: 'rails/rails', branch: '5-2-stable'
 gem 'pg'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -37,7 +37,6 @@ gem 'rollbar'
 
 group :development, :test do
   gem 'pry-byebug'
-  gem 'to_factory'
 end
 
 group :development do
