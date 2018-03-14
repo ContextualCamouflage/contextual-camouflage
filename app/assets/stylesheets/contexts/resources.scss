@@ -4,55 +4,125 @@
   }
   .carousel-slider {
     margin-bottom: 1em;
+    height: 500px !important;
     .indicators .indicator-item.active {
       transform: scale(1.5,1.5);
     }
     .carousel-item {
       padding: 1em;
+      h1.header {
+        margin-top: -0.5em;
+      }
     }
     .depression {
         background-color: #03264c;
+        a {
+          font-weight: bold;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
 
       .anxiety {
           background-color: #ffff00;
           h1, p, div {
           color: #1f1f1f;
+          a {
+            font-weight: bold;
+            color: #1f1f1f;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
         }
       }
 
       .bipolar {
           background-color: #64f566;
-        h1, p {
+          h1, p, div {
           color: #1f1f1f;
+          a {
+            font-weight: bold;
+            color: #1f1f1f;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
         }
       }
 
       .adhd {
           background-color: #ff9900;
-          h1, p {
+          h1, p, div {
             color: #1f1f1f;
+            a {
+              font-weight: bold;
+              color: #1f1f1f;
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+              }
+            }
           }
       }
 
       .dementia {
           background-color: #7f47dd;
+          a {
+            font-weight: bold;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
       }
 
       .ocd {
           background-color: #94261c;
+          a {
+            font-weight: bold;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
       }
 
       .schizophrenia {
           background-color: #8f2750;
+          a {
+            font-weight: bold;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
       }
 
       .autism {
           background-color: #4a8bcb;
+          a {
+            font-weight: bold;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
       }
 
       .ptsd {
           background-color: #159993;
+          a {
+            font-weight: bold;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
       }
     }
   }
