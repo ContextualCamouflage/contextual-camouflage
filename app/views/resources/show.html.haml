@@ -8,12 +8,12 @@
           %h1.header
             = @resource.name
           .resource-info
-            = @resource.body
+            = raw @resource.body
+      .go-back
+        =link_to 'Go back', resources_path, class: 'btn'
     .col.s12.l6
       .carousel.carousel-slider{"data-indicators": "true"}
         - @anecdotes.each do |anecdote|
           .anecdote.carousel-item
             %h1 Personal Story
             %p #{anecdote.body}
-    .go-back
-      =link_to 'Go back', resources_path, class: 'btn'
