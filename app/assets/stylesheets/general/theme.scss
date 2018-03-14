@@ -160,4 +160,13 @@ html {
           }
       }
   }
+  footer {
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.3);
+    .disclaimer {
+      color: #c3c3c3;
+      font-style: italic;
+      font-size: 0.5em
+    }
+  }
 }
