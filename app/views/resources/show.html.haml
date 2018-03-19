@@ -12,7 +12,7 @@
       .go-back
         =link_to 'Go back', resources_path, class: 'btn'
     .col.s12.l6
-      - if @anecdotes.count > 0
+      - unless @anecdotes.blank?
         .carousel.carousel-slider{"data-indicators": "true"}
           - @anecdotes.each do |anecdote|
             .anecdote.carousel-item
