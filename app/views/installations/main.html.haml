@@ -1,29 +1,5 @@
 .installations.main-display
   .row
-    .col.s12.l6
-      %h1.header
-        = @installation.display_name
-      .installation-info
-        .active
-          Active:
-          = @installation.active
-        .activated
-          Activated On:
-          = @installation.active_at
-      .h4.disorder-header COMMON MENTAL DISORDERS
-      .row.disorder-key
-        - @illnesses.each do |illness|
-          - illness_name = illness.name.downcase
-          .col.s6.m4.l3.disorder-icon{class: illness_name}
-            = link_to illness.name, resource_path(illness.id)
-      .row.resources
-        .carousel.carousel-slider{"data-indicators": "true"}
-          - @anecdotes.each do |anecdote|
-            - illness = Submission.find_by_id(anecdote.id).illness_id
-            - resource = Illness.find_by_id(illness).name.downcase
-            .resource.carousel-item{class: resource}
-              %h1 Personal Story
-              %p #{anecdote.body}
-    .col.s12.l6
+    .col.s12
       .map
-        = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 18, zoomControl: true}, markers: @submissions.map{|sub| {latlng: [sub.latitude, sub.longitude], icon: { icon_url: "/assets/#{Illness.find_by_id(sub.illness_id).name.downcase}.png"}}}, id: 'map')
+        = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 15, zoomControl: true}, markers: @submissions.map{|sub| {latlng: [sub.latitude, sub.longitude], icon: { icon_url: "/assets/#{Illness.find_by_id(sub.illness_id).name.downcase}.png"}}}, id: 'map')
