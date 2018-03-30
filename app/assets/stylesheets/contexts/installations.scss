@@ -13,7 +13,8 @@
     }
     &.main-display {
       #map {
-        height: 960px;
+        height: 75vh;
+        width: 100%;
       }
       .resources {
         margin-top: 2em;
