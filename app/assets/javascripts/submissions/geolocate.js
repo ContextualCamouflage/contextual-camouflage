@@ -25,8 +25,5 @@ function informUser() {
 }
 
 $(document).on('turbolinks:load', function() {
-  var $submitBtn = $('.installations').find('[data-next-form="story"]');
-  $submitBtn.on('click', function() {
-      geolocateUser();
-    });
+  geolocateUser();
 });
