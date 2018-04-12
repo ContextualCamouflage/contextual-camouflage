@@ -20,11 +20,13 @@ App.map = App.cable.subscriptions.create("MapChannel", {
 function appendMarker(markerLat, markerLong, markerName) {
   var dynamicIcon = '';
   var mapMarker = '';
-  dynamicIcon = new L.Icon({
-    iconUrl:'/assets/'+markerName
+  dynamicIcon = new L.divIcon({
+    className: markerName + 'Icon icon',
+    iconSize: "60px"
   });
   mapMarker = new L.marker([markerLat, markerLong], {
-    icon:dynamicIcon });
+    icon:dynamicIcon
+  });
   map.addLayer(mapMarker);
 }
 
