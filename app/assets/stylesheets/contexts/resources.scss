@@ -126,3 +126,12 @@
       }
     }
   }
+
+.helpful-resources {
+  a {
+    color: $blue;
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
