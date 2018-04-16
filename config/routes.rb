@@ -15,7 +15,8 @@ Rails.application.routes.draw do
 
   resources :interests, only: [:create]
 
-  root 'installations#index'
+  #root 'installations#index'
+  root :to => "installations#show", :id => '1'
 
   mount ActionCable.server, at: '/cable'
 end

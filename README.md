@@ -1,4 +1,4 @@
-# Contextual Camoflage
+# Contextual Camouflage
 
 [![Build Status](https://travis-ci.org/ContextualCamouflage/contextual-camoflage.svg?branch=master)](https://travis-ci.org/ContextualCamouflage/contextual-camoflage)
 
@@ -20,7 +20,7 @@ Read more about the Contextual Camouflage project by [McKoy Creative](mckoycreat
 
 # Getting Started
 
-[Wiki](https://github.com/ContextualCamouflage/contextual-camoflage/wiki)
+[Wiki](https://github.com/ContextualCamouflage/contextual-camouflage/wiki)
 
 # Instant Deployment
 
