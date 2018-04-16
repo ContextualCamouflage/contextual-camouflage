@@ -1,6 +1,45 @@
-%h1 Resources
-.row.disorder-key
-  - @resources.each do |resource|
-    - resource_name = resource.name.downcase
-    .col.s6.m4.l3.disorder-icon{class: resource_name}
-      = link_to resource.name, resource_path(resource)
+.container
+  %h1 Resources
+  .row.disorder-key
+    - @resources.each do |resource|
+      - resource_name = resource.name.downcase
+      .col.s6.m4.l3.disorder-icon{class: resource_name}
+        = link_to resource.name, resource_path(resource)
+  .row.helpful-resources
+    %h2 Need Help?
+    %ul
+      %li
+        National Suicide Prevention Lifeline ‐
+        = link_to 'http://www.suicidepreventionlifeline.org/', 'http://www.suicidepreventionlifeline.org/'
+        ‐
+        = link_to '1‐800‐273‐8255', 'tel:18002738255'
+      %li
+        The Trevor Project ‐
+        = link_to 'thetrevorproject.org', 'http://thetrevorproject.org'
+        ‐
+        = link_to '1‐866‐488‐7386', 'tel:18664887386'
+      %li
+        Veterans Crisis Line ‐
+        = link_to 'https://www.veteranscrisisline.net/', 'https://www.veteranscrisisline.net/'
+        ‐
+        = link_to '1‐800‐273‐8255', 'tel:18002738255'
+      %li
+        The National Domestic Violence Hotline ‐
+        = link_to 'http://www.thehotline.org', 'http://www.thehotline.org'
+        ‐
+        = link_to '1‐800‐799‐7233', 'tel:18007997233'
+      %li
+        Pittsburgh Action Against Rape ‐
+        = link_to 'https://paar.net/', 'https://paar.net/'
+        ‐
+        = link_to '1‐866‐363‐7273', 'tel:18663637273'
+      %li
+        Pittsburgh Housing Authority ‐
+        = link_to 'http://www.hacp.org', 'http://www.hacp.org'
+        ‐
+        = link_to '(412) 421‐6411', 'tel:4124216411'
+      %li
+        Pittsburgh Mercy Behavioral Health Services ‐
+        = link_to 'https://www.pittsburghmercy.org', 'https://www.pittsburghmercy.org'
+        ‐
+        = link_to '(877) 637‐2924', 'tel:8776372924'

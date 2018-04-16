@@ -11,3 +11,111 @@
       height: 1000px;
   }
 }
+
+.icon img {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+
+.icon {
+  //position: relative;
+  margin: 25px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.icon::after {
+  position: absolute;
+  top: -8px;
+  left: -11px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.icon::after {
+  animation: sonarWave 2s linear 2;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+
+.adhdIcon {
+  background-image: url(adhd.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #ff9900;
+  }
+}
+.anxietyIcon {
+  background-image: url(anxiety.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #ffff00;
+  }
+}
+.autismIcon {
+  background-image: url(autism.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #4a8bcb;
+  }
+}
+.bipolarIcon {
+  background-image: url(bipolar.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #64f566;
+  }
+}
+.dementiaIcon {
+  background-image: url(dementia.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #7f47dd;
+  }
+}
+.depressionIcon {
+  background-image: url(depression.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #03264c;
+  }
+}
+.ocdIcon {
+  background-image: url(ocd.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #94261c;
+  }
+}
+.ptsdIcon {
+  background-image: url(ptsd.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #159993;
+  }
+}
+.schizophreniaIcon {
+  background-image: url(schizophrenia.png);
+  background-repeat: no-repeat;
+  &::after {
+    background-color: #8f2750;
+  }
+}

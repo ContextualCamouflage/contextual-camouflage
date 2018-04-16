@@ -14,7 +14,7 @@ class SubmissionsController < ApplicationController
     if @submission.save
       session[:id] = @submission.id
       ActionCable.server.broadcast 'map_channel',
-                                   id: @submission.id, latitude: @submission.latitude, longitude: @submission.longitude, illness_name: "#{Illness.find_by_id(@submission.illness_id).name.downcase}.png"
+                                   id: @submission.id, latitude: @submission.latitude, longitude: @submission.longitude, illness_name: Illness.find_by_id(@submission.illness_id).name.downcase
     else
       redirect_back(fallback_location: root_path)
     end
