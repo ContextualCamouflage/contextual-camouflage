@@ -3,3 +3,8 @@
     .col.s12
       .map
         = map(center: {latlng: [@installation.latitude, @installation.longitude], zoom: 15, zoomControl: true}, markers: @submissions.map{|sub| {latlng: [sub.latitude, sub.longitude], icon: { icon_url: "/assets/#{Illness.find_by_id(sub.illness_id).name.downcase}.png"}}}, id: 'map')
+  .row.instruction
+    .col.s12
+      %h1
+        SHARE YOUR STORY NOW
+        = image_tag("iphone-icon.png", alt: "white cellphone icon")
