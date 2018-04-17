@@ -12,9 +12,19 @@
       color: $text-color;
     }
     &.main-display {
+      .row:first-child {
+        height: 70vh;
+      }
       #map {
-        height: 75vh;
+        height: 70vh;
         width: 100%;
+      }
+      .instruction {
+        width: 30%;
+        margin: auto;
+        img {
+          vertical-align: bottom;
+        }
       }
       .resources {
         margin-top: 2em;
