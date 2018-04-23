@@ -13,17 +13,17 @@
     }
     &.main-display {
       .row:first-child {
-        height: 70vh;
+        height: 60vh;
       }
       #map {
-        height: 70vh;
+        height: 60vh;
         width: 100%;
       }
       .instruction {
-        width: 30%;
+        text-align: center;
         margin: auto;
         img {
-          vertical-align: bottom;
+          vertical-align: middle;
         }
       }
       .resources {
