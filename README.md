@@ -1,6 +1,6 @@
-# Contextual Camoflage
+# Contextual Camouflage
 
-[![Build Status](https://travis-ci.org/ContextualCamouflage/contextual-camoflage.svg?branch=master)](https://travis-ci.org/ContextualCamouflage/contextual-camoflage)
+[![Build Status](https://travis-ci.org/ContextualCamouflage/contextual-Camouflage.svg?branch=master)](https://travis-ci.org/ContextualCamouflage/contextual-camouflage)
 
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
@@ -20,7 +20,7 @@ Read more about the Contextual Camouflage project by [McKoy Creative][mckoy-crea
 
 # Getting Started
 
-[Wiki](https://github.com/ContextualCamouflage/contextual-camoflage/wiki)
+[Wiki](https://github.com/ContextualCamouflage/contextual-camouflage/wiki)
 
 # Instant Deployment
 
