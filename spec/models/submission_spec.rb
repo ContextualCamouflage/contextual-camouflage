@@ -8,10 +8,6 @@ RSpec.describe Submission, type: :model do
     @submission = FactoryBot.create(:submission, illness_id: illness.id, locality: installation.locality)
   end
 
-  it { is_expected.to have_many(:researches) }
-  it { is_expected.to have_many(:anecdotes) }
-  it { validate_presence_of :illness_id }
-
   describe 'active_installation' do
     it 'is active' do
       expect(@submission.send(:active_installation)).to be_nil

@@ -51,7 +51,7 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'shoulda'
+  gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'simplecov'
   gem 'rails-controller-testing'
