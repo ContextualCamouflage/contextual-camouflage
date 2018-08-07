@@ -34,6 +34,7 @@ gem 'leaflet-rails'
 gem 'burgermenu-rails'
 gem 'non-stupid-digest-assets'
 gem 'rollbar'
+gem 'is_crawler'
 
 group :development, :test do
   gem 'pry-byebug'
