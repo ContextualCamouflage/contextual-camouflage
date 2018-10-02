@@ -3,14 +3,26 @@ function geolocateUser() {
   if (!authorizedLocation) {
     informUser();
   };
+
   if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      $('#latitude').val(position.coords.latitude);
-      $('#longitude').val(position.coords.longitude);
-    });
+    navigator.geolocation.getCurrentPosition(success, error);
+    $('#loading-modal').modal("open");
   } else {
     alert("Sorry! Geolocation services are unavailable in this browser. Please use an up to date browser or you will be unable to interact with this installation.");
   }
+}
+
+function success(position) {
+  console.log(position)
+  if(position) {
+    $('#loading-modal').modal("close");
+    $('#latitude').val(position.coords.latitude);
+    $('#longitude').val(position.coords.longitude);
+  }
+}
+
+function error() {
+  alert("Sorry, no position available.");
 }
 
 function informUser() {
