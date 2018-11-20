@@ -16,11 +16,10 @@ Read more about the Contextual Camouflage project by [McKoy Creative][mckoy-crea
 
 * [Brittany Martin](https://github.com/wonderwoman13)
 * [Danielle Greaves](https://github.com/danigirl329)
-* [Jeff Waltrowski](https://github.com/jwaltrowski)
 
 # Getting Started
 
-[Wiki](https://github.com/ContextualCamouflage/contextual-camouflage/wiki)
+[Getting Started as a Developer](https://github.com/ContextualCamouflage/contextual-camouflage/wiki/Getting-Started-as-a-Developer)
 
 # Instant Deployment
 
