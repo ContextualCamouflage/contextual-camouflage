@@ -60,16 +60,8 @@ illnesses = Illness.all
     illness_id: illnesses.sample.id,
     cookie: "thisismycookie#{rand(10...1000000)}",
     relationship: RELATIONSHIPS.sample,
-    ip_address: '23.25.80.129'
-  )
-end
-
-35.times do |n|
-  Submission.create!(
-    illness_id: illnesses.sample.id,
-    cookie: "thisismycookie#{rand(10...1000000)}",
-    relationship: RELATIONSHIPS.sample,
-    ip_address: '71.112.159.0'
+    ip_address: '23.25.80.129', 
+    locality: 'Sewickley'
   )
 end
 
